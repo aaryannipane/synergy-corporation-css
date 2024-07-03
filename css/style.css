@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* css reset from https://meyerweb.com/eric/tools/css/reset/ */
+/* BASE category */
+
+:root {
+  --primary-color: #2171ec;
+  --primary-font-color: #394456;
+  --secondary-font-color: #404c5b;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  /* inter font declaration */
+  font-family: "Inter", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* UTILITY CLASS */
+.border {
+  border: 1px solid black;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.secondary-heading {
+  margin: 20px 0;
+  color: var(--primary-font-color);
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.paragraph {
+  line-height: 22px;
+  font-size: 14px;
+  color: var(--secondary-font-color);
+}
+
+/* LAYOUT */
+.layout-header {
+  width: 100%;
+  min-width: 900px;
+  height: 56px;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.layout-container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.layout-page-header {
+  padding: 5px 0;
+  color: var(--primary-font-color);
+  text-transform: capitalize;
+  border-bottom: 1px solid #d4d7da;
+}
+
+.layout-main {
+  width: 590px;
+  margin-bottom: 20px;
+  color: var(--primary-font-color);
+}
+
+.layout-aside {
+  width: 260px;
+}
+
+.layout-footer {
+  margin-top: 20px;
+  width: 100%;
+  min-width: 900px;
+  height: 75px;
+  color: white;
+  background-color: #414c5e;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* MODULES */
+
+/* ------------------------------- NAVBAR STYLES ------------------------------- */
+.navbar-container li,
+.navbar-container a {
+  height: 100%;
+}
+
+.logo {
+  align-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.logo-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  padding-left: 5px;
+  font-size: 35px;
+  font-weight: 800;
+  align-content: center;
+  color: var(--primary-font-color);
+  border-radius: 50%;
+  background-color: white;
+}
+
+.logo-icon span {
+  margin-left: -7px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.logo-name span:first-child {
+  display: block;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+.logo-name small {
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+
+.navbar-container a {
+  position: relative;
+  display: inline-block;
+  align-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.layout-header .navbar-container a:hover {
+  background-color: #414c5e;
+}
+
+.layout-header .navbar-container a:active {
+  background-color: #414c5e80;
+}
+
+.navbar-container li:not(li:first-child) {
+  margin-left: 10px;
+}
+
+.navbar-container li {
+  display: inline-block;
+}
+
+/* ------------------------------- PAGE HEADER ------------------------------- */
+
+.page-header-heading {
+  padding: 11px 0;
+  width: 590px;
+}
+.page-header-heading h1 {
+  display: inline-block;
+  padding-left: 10px;
+  font-weight: 700;
+  border-left: 4px solid #2171ec;
+}
+.page-header-heading span {
+  color: var(--secondary-font-color);
+}
+
+.layout-page-header a {
+  display: contents;
+}
+
+.layout-page-header img {
+  display: inline-block;
+  width: 25px;
+  margin: 6px 0;
+}
+
+.layout-main p {
+  margin-bottom: 25px;
+}
+
+/* ------------------------------- CARDS COMPONENT ------------------------------- */
+
+.layout-card-container .card {
+  position: relative;
+  display: inline-block;
+  width: 185px;
+  height: 100%;
+  padding-bottom: 60px;
+  margin-bottom: 25px;
+  background-color: #e7eff2;
+}
+
+.card.card-two {
+  margin: 0 13px;
+}
+
+.layout-card-container img {
+  width: 100%;
+}
+
+.card h2 {
+  margin: 10px 0;
+}
+
+.card .card-details {
+  padding: 0 12px;
+}
+
+.card .btn {
+  position: absolute;
+  bottom: 15px;
+  left: 35px;
+  display: block;
+  padding: 10px 25px;
+  margin: 0 auto;
+  color: white;
+  text-transform: capitalize;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+}
+
+.card .btn:hover {
+  background-color: #588fe5;
+}
+.card .btn:active {
+  background-color: var(--primary-color);
+}
+
+/* ------------------------------- ASIDE STYLES ------------------------------- */
+.founder-details {
+  margin-bottom: 25px;
+}
+
+.founder-details h2 {
+  padding: 10px 15px;
+  font-weight: 600;
+  color: white;
+  background-color: #414c5e;
+}
+
+.founder-container {
+  padding: 15px 20px;
+  background-color: #e7eff2;
+}
+.founder-info {
+  margin-bottom: 10px;
+}
+
+.founder-container img {
+  width: 85px;
+}
+
+.founder-container .clear-fix p {
+  width: 125px;
+  font-weight: 400;
+  color: var(--secondary-font-color);
+  font-size: 14px;
+}
+
+.aside-info-container {
+  margin-bottom: 25px;
+  background-color: #e7eff2;
+}
+
+.aside-info-container h2 {
+  padding: 10px 15px;
+  font-weight: 600;
+  color: var(--primary-font-color);
+  background-color: #d4e3ea;
+}
+
+.aside-info {
+  padding: 15px 20px;
+}
+.aside-info p:not(p:last-child) {
+  margin-bottom: 10px;
+}
+
+/* ------------------------------- FOOTER STYLES ------------------------------- */
+
+.layout-footer .navbar a {
+  padding: 15px 0;
+  font-weight: 400;
+}
+
+.layout-footer .navbar a:hover {
+  color: #86aac2;
+}
+.layout-footer .navbar a:active {
+  color: white;
+}
+
+.layout-footer .copyright-text {
+  display: block;
+  font-size: 10px;
+  color: #9dabc2;
+  text-transform: capitalize;
+}
+
+.socials {
+  padding: 16px 0;
+}
+
+.socials a {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  transform: scale(0.8);
+}
+
+#tweeter {
+  background: url("../images/sprite-social-media.png") 0 0;
+}
+
+#tweeter:hover {
+  background: url("../images/sprite-social-media.png") 0 43px;
+}
+
+#google {
+  background: url("../images/sprite-social-media.png") -44px 0px;
+}
+#google:hover {
+  background: url("../images/sprite-social-media.png") -44px 43px;
+}
+#facebook {
+  background: url("../images/sprite-social-media.png") -88px 0px;
+}
+#facebook:hover {
+  background: url("../images/sprite-social-media.png") -88px 43px;
+}
+
+.layout-footer .layout-container {
+  position: relative;
+}
+
+.go-top {
+  position: absolute;
+  right: 0;
+  top: -27px;
+}
+
+.go-top a {
+  padding: 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  background-color: #608aa2;
+}
+
+.go-top span {
+  padding-right: 5px;
+  vertical-align: sub;
+}
+
+.go-top a:hover{
+	background-color: #7793a3;
+}
+
+/* STATE CATEGORY */
+.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  border-bottom: 5px solid #4fd8f9;
+}
+
